@@ -3,167 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CourseVault™ | Secure the Digital Empire</title>
+  <title>The Archive | Own the Infrastructure</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --gold: #facc15;
-      --deep-bg: #030712;
+      --glass: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
     }
+    
     body { 
-      font-family: 'Outfit', sans-serif; 
-      background-color: var(--deep-bg);
-      color: white;
-      overflow-x: hidden;
-    }
-    h1, h2, .font-heading { font-family: 'Unbounded', sans-serif; }
-
-    /* Moving Background Elements */
-    .glow-sphere {
-      position: fixed;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
-      border-radius: 50%;
-      z-index: -1;
-      filter: blur(60px);
-      animation: drift 25s infinite alternate;
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background: #02040a; 
+      color: #fff;
+      /* Replace the URL below with your actual uploaded image link */
+      background-image: linear-gradient(to bottom, rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.95)), url('YOUR_IMAGE_URL_HERE');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
     }
 
-    @keyframes drift {
-      0% { transform: translate(-10%, -10%); }
-      100% { transform: translate(20%, 30%); }
+    h1, h2, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+
+    .glass-panel {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
     }
 
-    .glass-card {
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    .glass-panel:hover {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.06);
     }
 
-    .gold-shimmer {
-      background: linear-gradient(120deg, #854d0e 0%, #facc15 50%, #854d0e 100%);
-      background-size: 200% auto;
+    .gold-gradient {
+      background: linear-gradient(90deg, #facc15, #eab308);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shine 3s linear infinite;
     }
 
-    @keyframes shine {
-      to { background-position: 200% center; }
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      font-weight: 800;
+      box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+      transition: all 0.3s transform;
     }
 
-    .stat-card {
-      border-left: 3px solid var(--gold);
-      background: linear-gradient(to right, rgba(250, 204, 21, 0.05), transparent);
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+    }
+
+    .course-badge {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      border: 1px solid rgba(250, 204, 21, 0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--gold);
     }
   </style>
 </head>
-<body>
+<body class="antialiased">
 
-  <div class="glow-sphere" style="top: -100px; left: -100px;"></div>
-  <div class="glow-sphere" style="bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(0,0,0,0) 70%);"></div>
-
-  <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20">
-    <div class="mb-8 px-4 py-2 glass-card rounded-full text-xs font-bold tracking-[0.3em] uppercase text-yellow-500 border-yellow-500/30">
-        The Ultimate Asset Acquisition
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <div class="mb-6 px-4 py-1.5 glass-panel rounded-full text-[10px] tracking-[0.4em] uppercase font-bold text-yellow-500">
+        400+ Assets • Absolute Ownership
     </div>
     
-    <h1 class="text-4xl md:text-7xl font-bold text-center leading-tight mb-8">
-      Stop Renting Knowledge. <br/>
-      <span class="gold-shimmer">Own the Whole Empire.</span>
+    <h1 class="text-5xl md:text-8xl font-bold leading-tight mb-6">
+      Stop Subscribing to Progress. <br/>
+      <span class="gold-gradient">Own the Archive.</span>
     </h1>
 
-    <p class="max-w-3xl text-center text-gray-400 text-lg md:text-xl leading-relaxed mb-12">
-        Most people spend a decade—and tens of thousands of dollars—slowly trickling courses into their library. You're about to bypass the grind. I’m handing over 400+ premium digital assets in one single transfer. This isn't just a "bundle"; it's a <strong>Business Infrastructure.</strong>
+    <p class="max-w-3xl text-gray-400 text-lg md:text-xl leading-relaxed mb-12 italic">
+        "Bypass the learning curve. Acquire decades of mastery in a single transfer. I am liquidating a private intellectual empire—transferred directly to you."
     </p>
 
     <div class="flex flex-col sm:flex-row gap-6">
-      <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" target="_blank" 
-         class="bg-yellow-500 hover:bg-yellow-400 text-black font-black px-12 py-5 rounded-xl transition-all transform hover:scale-105 text-center">
-        DOWNLOAD CATALOGUE
+      <a href="https://wa.me/+2347068634125" target="_blank" class="btn-primary px-12 py-5 rounded-2xl">
+        SECURE THE TRANSFER
       </a>
-      <a href="https://wa.me/+2347068634125" target="_blank" 
-         class="glass-card px-12 py-5 rounded-xl font-bold hover:bg-white/5 text-center">
-        SECURE MY VAULT
+      <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" target="_blank" class="glass-panel px-12 py-5 rounded-2xl font-bold">
+        EXPLORE THE FULL CATALOG
       </a>
     </div>
-  </header>
+  </section>
 
-  <section class="py-32 px-6 max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
-        <div>
-            <h2 class="text-4xl font-bold mb-8 font-heading">Why This Exists.</h2>
-            <div class="space-y-8 text-gray-300">
-                <p class="text-lg">
-                    Information is the only currency that doesn't devalue. But waiting until you "need" a skill to buy a course is a losing strategy. It's expensive and slow.
-                </p>
-                <div class="stat-card p-6">
-                    <h4 class="text-white font-bold mb-2">Immediate Leverage</h4>
-                    <p>Whether you're launching an agency tomorrow or need to master AI trading tonight, you already have the curriculum. No credit cards, no waiting.</p>
-                </div>
-                <div class="stat-card p-6">
-                    <h4 class="text-white font-bold mb-2">Resell & Repurpose</h4>
-                    <p>This is a digital warehouse. Use these courses to train your team, bundle them with your high-ticket offers, or use them as the backbone of your own academy.</p>
-                </div>
-            </div>
-        </div>
-        <div class="grid grid-cols-2 gap-4">
-            <div class="glass-card p-8 rounded-3xl mt-12">
-                <span class="text-4xl">🤖</span>
-                <h3 class="font-bold mt-4">AI Mastery</h3>
-                <p class="text-sm text-gray-500 mt-2">Machine Learning to Prompt Engineering.</p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl">
-                <span class="text-4xl">💰</span>
-                <h3 class="font-bold mt-4">Finance</h3>
-                <p class="text-sm text-gray-500 mt-2">Day Trading, Crypto, and Real Estate.</p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl mt-[-20px]">
-                <span class="text-4xl">📈</span>
-                <h3 class="font-bold mt-4">Sales</h3>
-                <p class="text-sm text-gray-500 mt-2">Closing, Funnels, and Ad Copy.</p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl mt-[-40px]">
-                <span class="text-4xl">💻</span>
-                <h3 class="font-bold mt-4">Tech</h3>
-                <p class="text-sm text-gray-500 mt-2">Fullstack Dev to Cybersecurity.</p>
-            </div>
-        </div>
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Curated Intelligence</h2>
+        <p class="text-gray-500 uppercase tracking-widest text-sm font-bold">A Snippet of the 12 Power Modules Inside</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
+        <h3 class="font-bold text-white">Generative AI Masterclass</h3>
+        <p class="text-xs text-gray-500 mt-2">Prompt engineering & LLM integration.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
+        <h3 class="font-bold text-white">Python for Automation</h3>
+        <p class="text-xs text-gray-500 mt-2">Scale your business with custom scripts.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
+        <h3 class="font-bold text-white">Full-Stack Web 3.0</h3>
+        <p class="text-xs text-gray-500 mt-2">Blockchain dev & smart contracts.</p>
+      </div>
+
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">FINANCE</span>
+        <h3 class="font-bold text-white">Day Trading Mastery</h3>
+        <p class="text-xs text-gray-500 mt-2">Technical analysis & risk management.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">FINANCE</span>
+        <h3 class="font-bold text-white">Crypto Wealth Systems</h3>
+        <p class="text-xs text-gray-500 mt-2">DeFi, Staking, and Altcoin strategies.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">FINANCE</span>
+        <h3 class="font-bold text-white">Real Estate Flipping</h3>
+        <p class="text-xs text-gray-500 mt-2">Property valuation & digital sourcing.</p>
+      </div>
+
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
+        <h3 class="font-bold text-white">7-Figure Agency Guide</h3>
+        <p class="text-xs text-gray-500 mt-2">Scale from zero to $10k/month.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
+        <h3 class="font-bold text-white">High-Ticket Closing</h3>
+        <p class="text-xs text-gray-500 mt-2">Psychology of the $50k sale.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
+        <h3 class="font-bold text-white">E-Commerce Empire</h3>
+        <p class="text-xs text-gray-500 mt-2">Dropshipping & private labeling.</p>
+      </div>
+
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">MARKETING</span>
+        <h3 class="font-bold text-white">Meta Ads Blueprints</h3>
+        <p class="text-xs text-gray-500 mt-2">Advanced targeting & ad psychology.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">MARKETING</span>
+        <h3 class="font-bold text-white">SEO Authority Secrets</h3>
+        <p class="text-xs text-gray-500 mt-2">Rank #1 for high-competition keywords.</p>
+      </div>
+      <div class="glass-panel p-6 rounded-3xl">
+        <span class="course-badge mb-3 block w-fit">CREATIVE</span>
+        <h3 class="font-bold text-white">Cinematic Video Editing</h3>
+        <p class="text-xs text-gray-500 mt-2">Adobe Premiere & After Effects.</p>
+      </div>
     </div>
   </section>
 
   <section class="py-32 px-6">
-    <div class="max-w-5xl mx-auto glass-card p-12 md:p-24 rounded-[40px] relative overflow-hidden text-center">
-        <div class="relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">The Real Numbers.</h2>
-            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
-                If you bought these 400 courses individually on Udemy today, you would pay over <strong>$5,200</strong>. I am transferring the entire asset for a fraction of that. 
-            </p>
-            
-            <div class="flex flex-col items-center">
-                <span class="text-gray-500 line-through text-2xl mb-2">$5,200 VALUE</span>
-                <span class="text-6xl md:text-8xl font-black gold-shimmer mb-8 leading-none">$4,160</span>
-                <p class="text-yellow-500 font-bold mb-12 tracking-widest">ONE-TIME TRANSFER FEE</p>
-                
-                <a href="https://wa.me/+2347068634125" target="_blank" class="w-full max-w-md bg-white text-black font-black py-6 rounded-2xl hover:bg-yellow-500 transition-colors text-xl">
-                    MESSAGE ME ON WHATSAPP
-                </a>
-                <p class="mt-6 text-sm text-gray-500 italic">I handle every transfer personally. Reach out to verify the catalog.</p>
-            </div>
+    <div class="max-w-4xl mx-auto glass-panel p-12 md:p-24 rounded-[3rem] text-center">
+        <h2 class="text-4xl font-bold mb-6">Own the Asset Today.</h2>
+        <p class="text-gray-400 mb-12 text-lg">
+            This is a private transfer of a 400+ course library. No logins to share, no platform fees. I transfer the files; you own the knowledge.
+        </p>
+        
+        <div class="mb-12">
+            <span class="text-gray-600 line-through text-2xl">$5,200 VALUE</span>
+            <div class="text-7xl font-black gold-gradient">$4,160</div>
         </div>
+
+        <a href="https://wa.me/+2347068634125" target="_blank" class="inline-block bg-white text-black font-black py-6 px-16 rounded-2xl text-xl hover:bg-yellow-400 transition-all transform hover:scale-105">
+            MESSAGE ME ON WHATSAPP
+        </a>
+        <p class="mt-8 text-[10px] text-gray-500 tracking-widest uppercase italic">One-Time Asset Liquidation. Handle Personally by Jibson.</p>
     </div>
   </section>
 
-  <footer class="py-20 px-6 border-t border-white/5 text-center text-gray-500">
-    <div class="flex justify-center gap-12 mb-8 font-bold text-sm tracking-widest uppercase">
-        <a href="#" class="hover:text-yellow-500">Home</a>
-        <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" class="hover:text-yellow-500">Catalog</a>
-        <a href="mailto:davidajibua78@gmail.com" class="hover:text-yellow-500">Contact</a>
-    </div>
-    <p class="text-xs">&copy; 2026 CourseVault™. All Rights Reserved. Private Asset Transfer.</p>
+  <footer class="py-12 border-t border-white/5 text-center text-gray-700 text-xs">
+    &copy; 2026 THE ARCHIVE | PRIVATE ASSET ACQUISITION
   </footer>
 
 </body>
