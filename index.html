@@ -3,149 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CourseVault™ — Own the Empire</title>
+  <title>CourseVault™ | Secure the Digital Empire</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --gold: #facc15;
+      --deep-bg: #030712;
+    }
     body { 
-      font-family: 'Plus Jakarta Sans', sans-serif; 
-      background-color: #05070a;
+      font-family: 'Outfit', sans-serif; 
+      background-color: var(--deep-bg);
+      color: white;
       overflow-x: hidden;
     }
-    
-    /* Animated Background Blobs */
-    .blob {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 100%);
-      filter: blur(80px);
+    h1, h2, .font-heading { font-family: 'Unbounded', sans-serif; }
+
+    /* Moving Background Elements */
+    .glow-sphere {
+      position: fixed;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
       border-radius: 50%;
       z-index: -1;
-      opacity: 0.4;
-      animation: float 20s infinite alternate;
+      filter: blur(60px);
+      animation: drift 25s infinite alternate;
     }
 
-    @keyframes float {
-      from { transform: translate(0, 0); }
-      to { transform: translate(100px, 50px); }
+    @keyframes drift {
+      0% { transform: translate(-10%, -10%); }
+      100% { transform: translate(20%, 30%); }
     }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 24px;
+    .glass-card {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     }
 
-    .gold-gradient {
-      background: linear-gradient(90deg, #facc15, #eab308);
+    .gold-shimmer {
+      background: linear-gradient(120deg, #854d0e 0%, #facc15 50%, #854d0e 100%);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
-      box-shadow: 0 10px 20px -5px rgba(250, 204, 21, 0.4);
-      transition: all 0.3s ease;
+    @keyframes shine {
+      to { background-position: 200% center; }
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 30px -5px rgba(250, 204, 21, 0.6);
-    }
-
-    .card-hover:hover {
-      border-color: rgba(250, 204, 21, 0.4);
-      background: rgba(255, 255, 255, 0.06);
+    .stat-card {
+      border-left: 3px solid var(--gold);
+      background: linear-gradient(to right, rgba(250, 204, 21, 0.05), transparent);
     }
   </style>
 </head>
-<body class="text-white">
+<body>
 
-  <div class="blob top-0 -left-20"></div>
-  <div class="blob bottom-0 -right-20" style="background: #1e1b4b; animation-delay: -5s;"></div>
+  <div class="glow-sphere" style="top: -100px; left: -100px;"></div>
+  <div class="glow-sphere" style="bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(0,0,0,0) 70%);"></div>
 
-  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
-    <div class="inline-block px-4 py-1.5 mb-6 glass text-sm font-semibold tracking-wide text-yellow-500 uppercase">
-        Limited Lifetime Asset Transfer
+  <header class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20">
+    <div class="mb-8 px-4 py-2 glass-card rounded-full text-xs font-bold tracking-[0.3em] uppercase text-yellow-500 border-yellow-500/30">
+        The Ultimate Asset Acquisition
     </div>
-    <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-none mb-6">
-      Own the Ultimate <br/><span class="gold-gradient">Digital Empire</span>
-    </h1>
-    <p class="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-      A curated collection of <span class="text-white font-semibold">400+ Premium Courses</span> ($5,000+ Value). 
-      One transfer. No subscriptions. Total ownership forever.
-    </p>
     
-    <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
-      <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" target="_blank" class="btn-primary px-10 py-4 rounded-full text-black font-extrabold text-lg">
-        Explore the Catalog
+    <h1 class="text-4xl md:text-7xl font-bold text-center leading-tight mb-8">
+      Stop Renting Knowledge. <br/>
+      <span class="gold-shimmer">Own the Whole Empire.</span>
+    </h1>
+
+    <p class="max-w-3xl text-center text-gray-400 text-lg md:text-xl leading-relaxed mb-12">
+        Most people spend a decade—and tens of thousands of dollars—slowly trickling courses into their library. You're about to bypass the grind. I’m handing over 400+ premium digital assets in one single transfer. This isn't just a "bundle"; it's a <strong>Business Infrastructure.</strong>
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-6">
+      <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" target="_blank" 
+         class="bg-yellow-500 hover:bg-yellow-400 text-black font-black px-12 py-5 rounded-xl transition-all transform hover:scale-105 text-center">
+        DOWNLOAD CATALOGUE
       </a>
-      <a href="https://wa.me/+2347068634125" target="_blank" class="glass px-10 py-4 rounded-full font-bold hover:bg-white/10 transition">
-        Talk to an Expert
+      <a href="https://wa.me/+2347068634125" target="_blank" 
+         class="glass-card px-12 py-5 rounded-xl font-bold hover:bg-white/5 text-center">
+        SECURE MY VAULT
       </a>
     </div>
-  </section>
+  </header>
 
-  <section class="py-24 px-6 max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+  <section class="py-32 px-6 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-20 items-center">
         <div>
-            <h2 class="text-4xl font-bold">The Vault Contents</h2>
-            <p class="text-gray-400 mt-2">Master every digital frontier with these core hubs.</p>
-        </div>
-        <span class="text-yellow-500 font-mono">400+ COURSES TOTAL</span>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
-      <div class="md:col-span-3 lg:col-span-4 glass p-8 card-hover transition">
-        <div class="text-3xl mb-4">💰</div>
-        <h3 class="text-xl font-bold mb-2">Finance & Trading</h3>
-        <p class="text-gray-400 text-sm">Master markets, crypto, and wealth management strategies.</p>
-      </div>
-      <div class="md:col-span-3 lg:col-span-4 glass p-8 card-hover transition">
-        <div class="text-3xl mb-4">🤖</div>
-        <h3 class="text-xl font-bold mb-2">AI & Machine Learning</h3>
-        <p class="text-gray-400 text-sm">LLMs, Python automation, and future-tech frameworks.</p>
-      </div>
-      <div class="md:col-span-6 lg:col-span-4 glass p-8 card-hover transition bg-gradient-to-br from-yellow-500/10 to-transparent">
-        <div class="text-3xl mb-4">📈</div>
-        <h3 class="text-xl font-bold mb-2">Growth Accelerator</h3>
-        <p class="text-gray-400 text-sm">Marketing, Sales, and high-ticket closing blueprints.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-24 px-6 bg-white/[0.02] border-y border-white/10">
-    <div class="max-w-4xl mx-auto glass p-10 md:p-16 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-3xl"></div>
-        <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Why settle for access when you can own?</h2>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3 text-gray-300">
-                        <span class="text-yellow-500">✔</span> Lifetime Resell Potential
-                    </li>
-                    <li class="flex items-center gap-3 text-gray-300">
-                        <span class="text-yellow-500">✔</span> Zero Ongoing Costs
-                    </li>
-                </ul>
+            <h2 class="text-4xl font-bold mb-8 font-heading">Why This Exists.</h2>
+            <div class="space-y-8 text-gray-300">
+                <p class="text-lg">
+                    Information is the only currency that doesn't devalue. But waiting until you "need" a skill to buy a course is a losing strategy. It's expensive and slow.
+                </p>
+                <div class="stat-card p-6">
+                    <h4 class="text-white font-bold mb-2">Immediate Leverage</h4>
+                    <p>Whether you're launching an agency tomorrow or need to master AI trading tonight, you already have the curriculum. No credit cards, no waiting.</p>
+                </div>
+                <div class="stat-card p-6">
+                    <h4 class="text-white font-bold mb-2">Resell & Repurpose</h4>
+                    <p>This is a digital warehouse. Use these courses to train your team, bundle them with your high-ticket offers, or use them as the backbone of your own academy.</p>
+                </div>
             </div>
-            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 text-center">
-                <p class="text-gray-400 line-through mb-1 text-lg">$5,200</p>
-                <p class="text-5xl font-extrabold gold-gradient mb-4">$4,160</p>
-                <p class="text-xs uppercase tracking-widest text-gray-500">One-Time Transfer Fee</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="glass-card p-8 rounded-3xl mt-12">
+                <span class="text-4xl">🤖</span>
+                <h3 class="font-bold mt-4">AI Mastery</h3>
+                <p class="text-sm text-gray-500 mt-2">Machine Learning to Prompt Engineering.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <span class="text-4xl">💰</span>
+                <h3 class="font-bold mt-4">Finance</h3>
+                <p class="text-sm text-gray-500 mt-2">Day Trading, Crypto, and Real Estate.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl mt-[-20px]">
+                <span class="text-4xl">📈</span>
+                <h3 class="font-bold mt-4">Sales</h3>
+                <p class="text-sm text-gray-500 mt-2">Closing, Funnels, and Ad Copy.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl mt-[-40px]">
+                <span class="text-4xl">💻</span>
+                <h3 class="font-bold mt-4">Tech</h3>
+                <p class="text-sm text-gray-500 mt-2">Fullstack Dev to Cybersecurity.</p>
             </div>
         </div>
     </div>
   </section>
 
-  <footer class="py-12 text-center text-gray-600">
-    <div class="flex justify-center gap-8 mb-6">
-        <a href="mailto:davidajibua78@gmail.com" class="hover:text-white transition">Email</a>
-        <a href="https://wa.me/+2347068634125" class="hover:text-white transition">WhatsApp</a>
+  <section class="py-32 px-6">
+    <div class="max-w-5xl mx-auto glass-card p-12 md:p-24 rounded-[40px] relative overflow-hidden text-center">
+        <div class="relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">The Real Numbers.</h2>
+            <p class="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
+                If you bought these 400 courses individually on Udemy today, you would pay over <strong>$5,200</strong>. I am transferring the entire asset for a fraction of that. 
+            </p>
+            
+            <div class="flex flex-col items-center">
+                <span class="text-gray-500 line-through text-2xl mb-2">$5,200 VALUE</span>
+                <span class="text-6xl md:text-8xl font-black gold-shimmer mb-8 leading-none">$4,160</span>
+                <p class="text-yellow-500 font-bold mb-12 tracking-widest">ONE-TIME TRANSFER FEE</p>
+                
+                <a href="https://wa.me/+2347068634125" target="_blank" class="w-full max-w-md bg-white text-black font-black py-6 rounded-2xl hover:bg-yellow-500 transition-colors text-xl">
+                    MESSAGE ME ON WHATSAPP
+                </a>
+                <p class="mt-6 text-sm text-gray-500 italic">I handle every transfer personally. Reach out to verify the catalog.</p>
+            </div>
+        </div>
     </div>
-    <p class="text-sm">CourseVault™ &copy; 2026. This is a one-time digital asset transfer.</p>
+  </section>
+
+  <footer class="py-20 px-6 border-t border-white/5 text-center text-gray-500">
+    <div class="flex justify-center gap-12 mb-8 font-bold text-sm tracking-widest uppercase">
+        <a href="#" class="hover:text-yellow-500">Home</a>
+        <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" class="hover:text-yellow-500">Catalog</a>
+        <a href="mailto:davidajibua78@gmail.com" class="hover:text-yellow-500">Contact</a>
+    </div>
+    <p class="text-xs">&copy; 2026 CourseVault™. All Rights Reserved. Private Asset Transfer.</p>
   </footer>
 
 </body>
