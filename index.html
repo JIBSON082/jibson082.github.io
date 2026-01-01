@@ -17,8 +17,8 @@
       font-family: 'Plus Jakarta Sans', sans-serif; 
       background: #02040a; 
       color: #fff;
-      /* Replace the URL below with your actual uploaded image link */
-      background-image: linear-gradient(to bottom, rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.95)), url('YOUR_IMAGE_URL_HERE');
+      /* Background Image Implementation */
+      background-image: linear-gradient(to bottom, rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.95)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
@@ -36,6 +36,7 @@
     .glass-panel:hover {
       border-color: var(--gold);
       background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-5px);
     }
 
     .gold-gradient {
@@ -49,7 +50,7 @@
       color: #000;
       font-weight: 800;
       box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
-      transition: all 0.3s transform;
+      transition: all 0.3s ease;
     }
 
     .btn-primary:hover {
@@ -59,11 +60,12 @@
 
     .course-badge {
       font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      border: 1px solid rgba(250, 204, 21, 0.3);
-      padding: 2px 8px;
+      letter-spacing: 0.15em;
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      padding: 3px 10px;
       border-radius: 4px;
       color: var(--gold);
+      font-weight: bold;
     }
   </style>
 </head>
@@ -79,8 +81,9 @@
       <span class="gold-gradient">Own the Archive.</span>
     </h1>
 
-    <p class="max-w-3xl text-gray-400 text-lg md:text-xl leading-relaxed mb-12 italic">
-        "Bypass the learning curve. Acquire decades of mastery in a single transfer. I am liquidating a private intellectual empire—transferred directly to you."
+    <p class="max-w-3xl text-gray-400 text-lg md:text-xl leading-relaxed mb-12">
+        Bypass the learning curve. Acquire decades of mastery in a single transfer. <br class="hidden md:block"> 
+        I am liquidating a private intellectual empire—transferred directly to you.
     </p>
 
     <div class="flex flex-col sm:flex-row gap-6">
@@ -88,7 +91,7 @@
         SECURE THE TRANSFER
       </a>
       <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" target="_blank" class="glass-panel px-12 py-5 rounded-2xl font-bold">
-        EXPLORE THE FULL CATALOG
+        EXPLORE THE CATALOG
       </a>
     </div>
   </section>
@@ -96,97 +99,109 @@
   <section class="py-24 px-6 max-w-7xl mx-auto">
     <div class="text-center mb-16">
         <h2 class="text-3xl md:text-5xl font-bold mb-4">Curated Intelligence</h2>
-        <p class="text-gray-500 uppercase tracking-widest text-sm font-bold">A Snippet of the 12 Power Modules Inside</p>
+        <p class="text-gray-500 uppercase tracking-widest text-sm font-bold">12 Power Modules Included in the 400+ Asset Vault</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
-        <h3 class="font-bold text-white">Generative AI Masterclass</h3>
-        <p class="text-xs text-gray-500 mt-2">Prompt engineering & LLM integration.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">AI & Tech</span>
+        <h3 class="font-bold text-lg text-white">Generative AI Masterclass</h3>
+        <p class="text-sm text-gray-500 mt-2">Prompt engineering & LLM integration for business.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
-        <h3 class="font-bold text-white">Python for Automation</h3>
-        <p class="text-xs text-gray-500 mt-2">Scale your business with custom scripts.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">AI & Tech</span>
+        <h3 class="font-bold text-lg text-white">Python Automation</h3>
+        <p class="text-sm text-gray-500 mt-2">Custom scripts to replace 40 hours of manual work.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">AI & TECH</span>
-        <h3 class="font-bold text-white">Full-Stack Web 3.0</h3>
-        <p class="text-xs text-gray-500 mt-2">Blockchain dev & smart contracts.</p>
-      </div>
-
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">FINANCE</span>
-        <h3 class="font-bold text-white">Day Trading Mastery</h3>
-        <p class="text-xs text-gray-500 mt-2">Technical analysis & risk management.</p>
-      </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">FINANCE</span>
-        <h3 class="font-bold text-white">Crypto Wealth Systems</h3>
-        <p class="text-xs text-gray-500 mt-2">DeFi, Staking, and Altcoin strategies.</p>
-      </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">FINANCE</span>
-        <h3 class="font-bold text-white">Real Estate Flipping</h3>
-        <p class="text-xs text-gray-500 mt-2">Property valuation & digital sourcing.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Web 3.0</span>
+        <h3 class="font-bold text-lg text-white">Blockchain Systems</h3>
+        <p class="text-sm text-gray-500 mt-2">Smart contracts and the future of digital assets.</p>
       </div>
 
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
-        <h3 class="font-bold text-white">7-Figure Agency Guide</h3>
-        <p class="text-xs text-gray-500 mt-2">Scale from zero to $10k/month.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Finance</span>
+        <h3 class="font-bold text-lg text-white">Day Trading Mastery</h3>
+        <p class="text-sm text-gray-500 mt-2">Institutional-grade technical analysis.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
-        <h3 class="font-bold text-white">High-Ticket Closing</h3>
-        <p class="text-xs text-gray-500 mt-2">Psychology of the $50k sale.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Finance</span>
+        <h3 class="font-bold text-lg text-white">Crypto Wealth</h3>
+        <p class="text-sm text-gray-500 mt-2">Staking, DeFi, and Altcoin alpha strategies.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">BUSINESS</span>
-        <h3 class="font-bold text-white">E-Commerce Empire</h3>
-        <p class="text-xs text-gray-500 mt-2">Dropshipping & private labeling.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Finance</span>
+        <h3 class="font-bold text-lg text-white">Real Estate Flipping</h3>
+        <p class="text-sm text-gray-500 mt-2">Property valuation and remote sourcing.</p>
       </div>
 
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">MARKETING</span>
-        <h3 class="font-bold text-white">Meta Ads Blueprints</h3>
-        <p class="text-xs text-gray-500 mt-2">Advanced targeting & ad psychology.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Business</span>
+        <h3 class="font-bold text-lg text-white">7-Figure Agency</h3>
+        <p class="text-sm text-gray-500 mt-2">Client acquisition and high-ticket retention.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">MARKETING</span>
-        <h3 class="font-bold text-white">SEO Authority Secrets</h3>
-        <p class="text-xs text-gray-500 mt-2">Rank #1 for high-competition keywords.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Business</span>
+        <h3 class="font-bold text-lg text-white">High-Ticket Closing</h3>
+        <p class="text-sm text-gray-500 mt-2">The psychological framework of $50k sales.</p>
       </div>
-      <div class="glass-panel p-6 rounded-3xl">
-        <span class="course-badge mb-3 block w-fit">CREATIVE</span>
-        <h3 class="font-bold text-white">Cinematic Video Editing</h3>
-        <p class="text-xs text-gray-500 mt-2">Adobe Premiere & After Effects.</p>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Business</span>
+        <h3 class="font-bold text-lg text-white">E-Commerce Empire</h3>
+        <p class="text-sm text-gray-500 mt-2">Private labeling and brand infrastructure.</p>
+      </div>
+
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Marketing</span>
+        <h3 class="font-bold text-lg text-white">Meta Ads Mastery</h3>
+        <p class="text-sm text-gray-500 mt-2">Advanced algorithm targeting & ad psychology.</p>
+      </div>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Marketing</span>
+        <h3 class="font-bold text-lg text-white">SEO Authority</h3>
+        <p class="text-sm text-gray-500 mt-2">Dominating search results for any niche.</p>
+      </div>
+      <div class="glass-panel p-8 rounded-3xl">
+        <span class="course-badge mb-4 block w-fit uppercase">Creative</span>
+        <h3 class="font-bold text-lg text-white">Cinematic Editing</h3>
+        <p class="text-sm text-gray-500 mt-2">Post-production mastery for viral content.</p>
       </div>
     </div>
   </section>
 
   <section class="py-32 px-6">
-    <div class="max-w-4xl mx-auto glass-panel p-12 md:p-24 rounded-[3rem] text-center">
-        <h2 class="text-4xl font-bold mb-6">Own the Asset Today.</h2>
+    <div class="max-w-4xl mx-auto glass-panel p-12 md:p-24 rounded-[3rem] text-center relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/10 blur-[120px] -z-10"></div>
+        <h2 class="text-4xl font-bold mb-6">Total Asset Acquisition</h2>
         <p class="text-gray-400 mb-12 text-lg">
-            This is a private transfer of a 400+ course library. No logins to share, no platform fees. I transfer the files; you own the knowledge.
+            I handle the technical transfer personally. You receive full lifetime access to the Cloud Archive immediately upon confirmation. Reach out to verify the catalog or finalize your purchase.
         </p>
         
         <div class="mb-12">
-            <span class="text-gray-600 line-through text-2xl">$5,200 VALUE</span>
-            <div class="text-7xl font-black gold-gradient">$4,160</div>
+            <span class="text-gray-600 line-through text-2xl font-bold">$5,200 VALUE</span>
+            <div class="text-7xl md:text-8xl font-black gold-gradient">$4,160</div>
         </div>
 
-        <a href="https://wa.me/+2347068634125" target="_blank" class="inline-block bg-white text-black font-black py-6 px-16 rounded-2xl text-xl hover:bg-yellow-400 transition-all transform hover:scale-105">
-            MESSAGE ME ON WHATSAPP
-        </a>
-        <p class="mt-8 text-[10px] text-gray-500 tracking-widest uppercase italic">One-Time Asset Liquidation. Handle Personally by Jibson.</p>
+        <div class="flex flex-col gap-4">
+            <a href="https://wa.me/+2347068634125" target="_blank" class="bg-white text-black font-black py-6 rounded-2xl text-xl hover:bg-yellow-400 transition-all flex items-center justify-center gap-2">
+                <span>WHATSAPP ME</span>
+            </a>
+            <a href="mailto:davidajibua78@gmail.com" class="glass-panel py-6 rounded-2xl text-xl font-bold hover:text-yellow-400 transition-all">
+                EMAIL ME DIRECTLY
+            </a>
+        </div>
+        <p class="mt-8 text-[10px] text-gray-500 tracking-[0.3em] uppercase italic">Curated and sold exclusively by Jibson.</p>
     </div>
   </section>
 
-  <footer class="py-12 border-t border-white/5 text-center text-gray-700 text-xs">
-    &copy; 2026 THE ARCHIVE | PRIVATE ASSET ACQUISITION
+  <footer class="py-12 border-t border-white/5 text-center">
+    <div class="flex flex-wrap justify-center gap-8 mb-6 text-gray-500 text-sm font-bold uppercase tracking-widest">
+        <a href="#" class="hover:text-yellow-500">Home</a>
+        <a href="https://1drv.ms/x/c/963f12d882f23f21/EbcGcrnC3DJNlxpnBsuTWjgBiawfQ-TwhK7RO49lSilBcQ" class="hover:text-yellow-500">Full Catalog</a>
+        <a href="mailto:davidajibua78@gmail.com" class="hover:text-yellow-500">Email</a>
+        <a href="https://wa.me/+2347068634125" class="hover:text-yellow-500">WhatsApp</a>
+    </div>
+    <p class="text-[10px] text-gray-700 font-bold tracking-widest uppercase">&copy; 2026 THE ARCHIVE | PRIVATE ASSET ACQUISITION</p>
   </footer>
 
 </body>
